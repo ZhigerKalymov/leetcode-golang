@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math/big"
 	"strconv"
 )
 
@@ -19,19 +18,7 @@ func main(){
 
 func solution(n string) int {
 
-	b := new(big.Int)
-	b, ok := b.SetString(n, 10)
-	if !ok {
-		return 0
-	}
-
-	one := big.NewInt(1)
-
-	for ; b > one ; {
-
-	}
-
-
+	//TODO big.int
 
 	i, err := strconv.Atoi(n)
 	if err != nil {
