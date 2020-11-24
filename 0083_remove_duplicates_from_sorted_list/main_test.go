@@ -30,6 +30,11 @@ func Test_deleteDuplicates(t *testing.T) {
 			args{&ListNode{1, nil}},
 			&ListNode{1, nil},
 		},
+		{
+			"test_1.1.2.3.3",
+			args{&ListNode{1, &ListNode{1, &ListNode{2, &ListNode{3, &ListNode{3, nil}}}}}},
+			&ListNode{1, &ListNode{2, &ListNode{3, nil}}},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
